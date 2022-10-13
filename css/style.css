@@ -2,13 +2,22 @@ body {
   margin: 0px; /*tirar as margens padrões*/
   font-family: Arial, Helvetica, sans-serif; /*fonte padrão para o site*/
 }
-ul {
+h1,
+ul,
+p {
   margin: 0px; /*tirar margem padrão*/
+}
+ul {
   padding: 0px; /*tirar padding padrão*/
   list-style: none; /*tirar lista de li padrão*/
 }
 a {
   text-decoration: none; /*tirar sublinhado padrão do link*/
+  color: inherit; /*herdar a cor do elemento pai*/
+}
+img {
+  max-width: 100%; /*tamanho maximo da pagina*/
+  display: block; /*display em bloco*/
 }
 .header-bg {
   background-color: #000000; /*Cor do fundo do menu*/
@@ -19,8 +28,9 @@ a {
   gap: 20px; /*distancia entre os itens*/
   justify-content: space-between; /*jogar logo para a esquerda e menu para a direita*/
   align-items: center; /*Alinhas itens ao centro da caixa*/
+  box-sizing: border-box;
   padding: 20px; /* distandia dos itens dentro da caixa 20px para cada lado e cima e baixo*/
-  max-width: 1160px; /*tamanho da caixa entre logo e menu*/
+  max-width: 1200px; /*tamanho da caixa entre logo e menu*/
   margin-left: auto; /*quando aumentar o site sempre alinhar o menu ao centro*/
   margin-right: auto; /*quando aumentar o site sempre alinhar o menu ao centro*/
 }
@@ -63,7 +73,7 @@ a {
     background-color: #2e2e2e; /*quando passar o mouse sobre o botão muda a cor*/
   }
   .header-menu a::after {
-    display: none;
+    display: none; /*abaixo de 800px não terá o subinhado*/
   }
 }
 @media (max-width: 600px) {
@@ -74,4 +84,52 @@ a {
     padding: 8px 12px; /*distancia da caixa dos botões do menu*/
     font-size: 14px; /*tamanho da fonte*/
   }
+}
+.introducao-bg {
+  background-color: #000000; /*cor do fundo do campo introduçõa*/
+  color: #ffffff;
+}
+.introducao {
+  display: grid; /*display grid para dividir as colunas*/
+  grid-template-columns: 1fr 1fr; /*2 colunas divididas igualmente*/
+  gap: 0px 40px; /*distancia entre os itens cima/baixo e esquerda/direita*/
+  box-sizing: border-box; /*soma as margins e paddins junto ao max-width*/
+  max-width: 1200px; /*tamanho da caixa entre logo e menu*/
+  padding-left: 20px; /*distancia da caixa para a margim esquerda*/
+  padding-right: 20px; /*distancia da caixa para a margim direita*/
+  margin-left: auto; /*quando aumentar o site sempre alinhar o menu ao centro*/
+  margin-right: auto; /*quando aumentar o site sempre alinhar o menu ao centro*/
+}
+.introducao-conteudo {
+  align-self: end; /*alinhar os itens ao final do container*/
+  padding-bottom: 80px; /*distandia entre o item e as margens do container*/
+}
+.introducao h1 {
+  margin-bottom: 32px; /*margem do item para o bottom*/
+  font-size: 64px; /*tamanho da fonte*/
+  line-height: 1.125; /*altura da linha*/
+}
+.introducao h1 span {
+  color: #ffbb00;
+}
+.introducao p {
+  margin-bottom: 20px; /*margem do item para o bottom*/
+  font-size: 24px; /*tamanho da fonte*/
+  line-height: 1.5; /*altura da linha*/
+  color: #b2b2b2;
+}
+.introducao a {
+  display: inline-block; /*quando o menu ficar abaixo do outro manter o tamanho padrão*/
+  padding: 16px 32px; /*distancia da caixa do botão*/
+  background: linear-gradient(#ffbf00, #f2a50c); /*cor do botão*/
+  border-radius: 4px; /*borda arredondada*/
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /*sombra no botão*/
+  text-transform: uppercase; /*letras maiusculas*/
+  color: #332200; /*cor do botão*/
+  font-size: 18px; /*tamanho da fonte*/
+  line-height: 1.33; /*tamanho da linha*/
+  font-weight: bold; /*fonte em negrito*/
+}
+.introducao a:hover {
+  background: linear-gradient(#ffb60d, #e59317); /*cor do botão*/
 }
