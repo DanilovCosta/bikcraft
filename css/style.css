@@ -1,1 +1,77 @@
-
+body {
+  margin: 0px; /*tirar as margens padrões*/
+  font-family: Arial, Helvetica, sans-serif; /*fonte padrão para o site*/
+}
+ul {
+  margin: 0px; /*tirar margem padrão*/
+  padding: 0px; /*tirar padding padrão*/
+  list-style: none; /*tirar lista de li padrão*/
+}
+a {
+  text-decoration: none; /*tirar sublinhado padrão do link*/
+}
+.header-bg {
+  background-color: #000000; /*Cor do fundo do menu*/
+}
+.header {
+  display: flex; /*Display para cocnfiguração*/
+  flex-wrap: wrap; /*quando diminuir a pagina quebrar para baixo do outro*/
+  gap: 20px; /*distancia entre os itens*/
+  justify-content: space-between; /*jogar logo para a esquerda e menu para a direita*/
+  align-items: center; /*Alinhas itens ao centro da caixa*/
+  padding: 20px; /* distandia dos itens dentro da caixa 20px para cada lado e cima e baixo*/
+  max-width: 1160px; /*tamanho da caixa entre logo e menu*/
+  margin-left: auto; /*quando aumentar o site sempre alinhar o menu ao centro*/
+  margin-right: auto; /*quando aumentar o site sempre alinhar o menu ao centro*/
+}
+.header-menu {
+  display: flex; /*display flex para colocar os itens um ao lado do outro*/
+  flex-wrap: wrap; /*quando diminuir a pagina quebrar para baixo do outro*/
+  gap: 40px; /*distandia entre os links do menu*/
+}
+.header-menu a {
+  display: inline-block; /*quando o menu ficar abaixo do outro manter o tamanho padrão*/
+  color: #ffffff; /*cor da font do menu*/
+  padding: 16px 0px; /*distancia de top e bot sobre o item*/
+  font-size: 18px; /*tamanho da font do menu*/
+  position: relative; /*posição relativa para o item abaixo ser absoluto*/
+}
+.header-menu a::after {
+  /*criar um sublinhado animado abaixo do link do menu*/
+  content: ""; /*sempre em branco*/
+  display: block;
+  height: 2px; /*altura do sublinhado*/
+  width: 0px; /*tamanho de 0px do item*/
+  background: #ffffff; /*cor do sublinhadoentre o sublinhado e o item*/
+  margin-top: 4px; /*distancia */
+  transition: 0.3s; /*tempo que demorará para o sublinhado carregar os 100%*/
+  position: absolute; /*posição absolute sobre o item acima*/
+}
+.header-menu a:hover:after {
+  width: 100%; /*quando passar o mouse o sublinhado aparecerá*/
+}
+@media (max-width: 800px) {
+  .header-menu {
+    gap: 20px; /*distancia entre os itens do menu*/
+  }
+  .header-menu a {
+    background-color: #111111; /*cor da caixa dos botões do menu*/
+    padding: 12px 16px; /*distancia da caixa dos botões do menu*/
+    border-radius: 4px; /*borda do botão arredondada*/
+  }
+  .header-menu a:hover {
+    background-color: #2e2e2e; /*quando passar o mouse sobre o botão muda a cor*/
+  }
+  .header-menu a::after {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .header-menu {
+    gap: 12px; /*distancia entre os itens do menu*/
+  }
+  .header-menu a {
+    padding: 8px 12px; /*distancia da caixa dos botões do menu*/
+    font-size: 14px; /*tamanho da fonte*/
+  }
+}
