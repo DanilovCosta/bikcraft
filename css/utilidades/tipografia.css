@@ -1,12 +1,40 @@
-.texto-grande {
-  font-family: "Poppins"; /*fonte do menu baixada do google fonts*/
-  font-weight: 600; /*tipografia da fonte baixada do google*/
-  font-size: 64px; /*tamanho da fonte*/
-  line-height: 1.125; /*altura da linha*/
+.font-1-xs {
+  font: 400 0.75rem/1.35 "Poppins", sans-serif; /*para definir a font em apenas 1 linha primeiro seria font-weight(peso da fonte), depois seria o font-size(tamanho da fonte), depois com a barra a line-height (altura da linha) e por ultimo a font-family (tipo de fonte)*/
 }
-.texto-medio {
-  font-family: "Roboto"; /*fonte do menu baixada do google fonts*/
-  font-weight: 400; /*tipografia da fonte baixada do google*/
-  font-size: 24px; /*tamanho da fonte*/
-  line-height: 1.5; /*altura da linha*/
+.font-2-xs {
+  font: 400 0.875rem/1.43 "Roboto", sans-serif; /*para definir a font em apenas 1 linha primeiro seria font-weight(peso da fonte), depois seria o font-size(tamanho da fonte), depois com a barra a line-height (altura da linha) e por ultimo a font-family (tipo de fonte)*/
+}
+.font-1-s {
+  font: 400 1rem/1.5 "Poppins", sans-serif; /*para definir a font em apenas 1 linha primeiro seria font-weight(peso da fonte), depois seria o font-size(tamanho da fonte), depois com a barra a line-height (altura da linha) e por ultimo a font-family (tipo de fonte)*/
+}
+.font-1-m,
+.font-1-m-b {
+  font: 400 1.125rem/1.25 "popins", sans-serif; /*para definir a font em apenas 1 linha primeiro seria font-weight(peso da fonte), depois seria o font-size(tamanho da fonte), depois com a barra a line-height (altura da linha) e por ultimo a font-family (tipo de fonte)*/
+}
+.font-1-m-b {
+  font-weight: 600;
+}
+.font-2-m {
+  font: 500 1.125rem/1.35 "Roboto", sans-serif; /*para definir a font em apenas 1 linha primeiro seria font-weight(peso da fonte), depois seria o font-size(tamanho da fonte), depois com a barra a line-height (altura da linha) e por ultimo a font-family (tipo de fonte)*/
+}
+.font-1-l {
+  font: 400 1.55rem/1.5 "popins", sans-serif; /*para definir a font em apenas 1 linha primeiro seria font-weight(peso da fonte), depois seria o font-size(tamanho da fonte), depois com a barra a line-height (altura da linha) e por ultimo a font-family (tipo de fonte)*/
+}
+.font-2-l,
+.font-2-l-b {
+  font: 400 1.5rem/1.5 "Roboto", sans-serif; /*para definir a font em apenas 1 linha primeiro seria font-weight(peso da fonte), depois seria o font-size(tamanho da fonte), depois com a barra a line-height (altura da linha) e por ultimo a font-family (tipo de fonte)*/
+}
+.font-2-l {
+  font-weight: 500;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+}
+.font-1-xl {
+  font: 600 2rem/1.25 "popins", sans-serif; /*para definir a font em apenas 1 linha primeiro seria font-weight(peso da fonte), depois seria o font-size(tamanho da fonte), depois com a barra a line-height (altura da linha) e por ultimo a font-family (tipo de fonte)*/
+}
+.font-2-xl {
+  font: 500 4rem/1.125 "Roboto", sans-serif; /*para definir a font em apenas 1 linha primeiro seria font-weight(peso da fonte), depois seria o font-size(tamanho da fonte), depois com a barra a line-height (altura da linha) e por ultimo a font-family (tipo de fonte)*/
+}
+.font-1-xxl {
+  font: 600 4rem/1.125 "popins", sans-serif; /*para definir a font em apenas 1 linha primeiro seria font-weight(peso da fonte), depois seria o font-size(tamanho da fonte), depois com a barra a line-height (altura da linha) e por ultimo a font-family (tipo de fonte)*/
 }
