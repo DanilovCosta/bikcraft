@@ -1,0 +1,23 @@
+body {
+  margin: 0px; /*tirar as margens padrões*/
+  font-family: Arial, Helvetica, sans-serif; /*fonte padrão para o site*/
+  padding-bottom: 600px;
+  color: #111111;
+}
+h1,
+ul,
+p {
+  margin: 0px; /*tirar margem padrão*/
+}
+ul {
+  padding: 0px; /*tirar padding padrão*/
+  list-style: none; /*tirar lista de li padrão*/
+}
+a {
+  text-decoration: none; /*tirar sublinhado padrão do link*/
+  color: inherit; /*herdar a cor do elemento pai*/
+}
+img {
+  max-width: 100%; /*tamanho maximo da pagina*/
+  display: block; /*display em bloco*/
+}

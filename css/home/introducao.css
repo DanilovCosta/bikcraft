@@ -1,0 +1,65 @@
+.introducao-bg {
+  background-color: var(--cor-12); /*cor do fundo do campo introduçõa*/
+  box-shadow: inset 0 -120px var(--cor-0); /*inset cria uma borda dentro do container, 0px pros lados e -120 de baixo pra cima com a cor branca para a imagem ficar vazada*/
+}
+.introducao {
+  display: grid; /*display grid para dividir as colunas*/
+  grid-template-columns: 1fr 1fr; /*2 colunas divididas igualmente*/
+  gap: 0px 40px; /*distancia entre os itens cima/baixo e esquerda/direita*/
+  box-sizing: border-box; /*soma as margins e paddins junto ao max-width*/
+  max-width: 1200px; /*tamanho da caixa entre logo e menu*/
+  padding-left: 20px; /*distancia da caixa para a margim esquerda*/
+  padding-right: 20px; /*distancia da caixa para a margim direita*/
+  margin-left: auto; /*quando aumentar o site sempre alinhar o menu ao centro*/
+  margin-right: auto; /*quando aumentar o site sempre alinhar o menu ao centro*/
+}
+.introducao-conteudo {
+  align-self: end; /*alinhar os itens ao final do container*/
+  padding-bottom: 200px; /*distandia entre o item e as margens do container*/
+}
+
+.introducao img {
+  height: 100%; /*imagem 100% do container*/
+  object-fit: cover; /*fara com que a imagem redimensione dentro do campo estipulado*/
+  border-radius: 4px; /*imagem com cantos arredondados*/
+}
+.introducao h1 {
+  margin-bottom: 32px; /*margem do item para o bottom*/
+}
+
+.introducao p {
+  margin-bottom: 20px; /*margem do item para o bottom*/
+}
+
+@media (max-width: 1200px) {
+  .introducao h1 {
+    font-size: 48px; /*abaixo de 1200 a fonte será menor*/
+  }
+  .introducao p {
+    font-size: 18px; /*abaixo de 1200 a fonte será menor*/
+  }
+}
+@media (max-width: 800px) {
+  .introducao-bg {
+    background: var(
+      --cor-11
+    ); /*abaixo de 800px a cor da introdução será mais clara*/
+    padding-top: 40px; /*distancia entre o contrudo da caixa*/
+    box-shadow: inset 0 -60px var(--cor-0); /*inset cria uma borda dentro do container, 0px pros lados e -120 de baixo pra cima com a cor branca para a imagem ficar vazada*/
+  }
+  .introducao {
+    grid-template-columns: 1fr; /*abaixo de 800 terá apenas 1 coluna*/
+    gap: 32px; /*abaixo de 800 a distancia entre os itens será de 32px*/
+  }
+  .introducao-conteudo {
+    padding-bottom: 0px; /*abaixo de 800 não terá distancia entre o botão e a imagem*/
+  }
+  .introducao h1 {
+    font-size: 32px; /*abaixo de 800 a fonte será menor*/
+    margin-bottom: 16px; /*abaixo de 800 a margim bottom será menor*/
+  }
+  .introducao img {
+    height: 300px; /*tamanho da altura da imagem */
+    width: 100%; /*tamanho da largura da imagem*/
+  }
+}

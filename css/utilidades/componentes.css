@@ -1,0 +1,22 @@
+.botao {
+  font-family: "Poppins"; /*fonte do menu baixada do google fonts*/
+  display: inline-block; /*quando o menu ficar abaixo do outro manter o tamanho padrão*/
+  padding: 16px 32px; /*distancia da caixa do botão*/
+  background: linear-gradient(#ffbf00, #f2a50c); /*cor do botão*/
+  border-radius: 4px; /*borda arredondada*/
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /*sombra no botão*/
+  text-transform: uppercase; /*letras maiusculas*/
+  color: var(--cor-p5); /*cor do botão*/
+  font-size: 18px; /*tamanho da fonte*/
+  line-height: 1.33; /*tamanho da linha*/
+  font-weight: bold; /*fonte em negrito*/
+}
+.botao:hover {
+  background: linear-gradient(#ffb60d, #e59317); /*cor do botão*/
+}
+@media (max-width: 600px) {
+  .botao {
+    padding: 12px 16px; /*distancia da caixa do botão*/
+    font-size: 16px; /*tamanho da fonte do botão*/
+  }
+}
