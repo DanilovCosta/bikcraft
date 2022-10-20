@@ -1,0 +1,60 @@
+.bicicletas-lista {
+  padding-top: 60px; /**/
+  padding-bottom: 120px; /**/
+}
+.bicicletas-lista h2 {
+  margin-bottom: 40px; /*margem do container para o bottom*/
+  max-width: 1200px; /*tamanho maximo do containes*/
+  box-sizing: border-box; /*tamanho não ultrapassa o max-width somando margens*/
+  padding-left: 20px; /*distancia dos itens dentro do container lado esquerdo*/
+  padding-right: 20px; /*distancia dos itens dentro do container lado direito*/
+  margin-left: auto; /*quando for maior que 1400px centralixar*/
+  margin-right: auto; /*quando for maior que 1400px centralizar*/
+}
+.bicicletas-lista ul {
+  display: flex; /*colocar itens lado a lado*/
+  gap: 40px; /*distancia entre os itens */
+  padding: 0 20px 20px 20px; /*distancia dos itens para a margem*/
+  max-width: 1400px; /*tamanho maximo do containes*/
+  margin-left: auto; /*quando for maior que 1400px centralixar*/
+  margin-right: auto; /*quando for maior que 1400px centralizar*/
+  overflow-x: auto; /*cria uma barra de rolagem para o lado quando diminuir muito a pagina somente no eixo x
+*/
+}
+.bicicletas-lista li {
+  min-width: 280px; /*tamanho minimo para a imagem*/
+}
+.bicicletas-lista a {
+  display: block; /*para que o link pegue a imagem, texto e valor */
+}
+.bicicletas-lista img {
+  padding-bottom: 16px; /*distancia da imagem para a caixa */
+}
+.bicicletas-lista h3 {
+  margin-bottom: 8px; /* margem bottom*/
+  display: flex; /*display flex para alinhas os itens lado a lado */
+  align-items: center; /*alinhas os itens do before ao centro*/
+}
+.bicicletas-lista h3::before {
+  content: ""; /*sem descrição*/
+  display: inline-block;
+  height: 8px; /*altura do item*/
+  width: 12px; /*largura do item*/
+  background-color: var(--cor-p1); /*cor do item*/
+  margin-right: 8px; /*margem do item para o texto*/
+  transition: widht 0.3s; /*tempo levado apra carregar animação do before*/
+}
+.bicicletas-lista a:hover h3::before {
+  width: 24px;
+}
+.bicicletas-lista li span {
+  margin-left: 20px; /*margem do valor para alinhar com o texto somada o width + mardin- rigth*/
+}
+@media (max-width: 800px) {
+  .bicicletas-lista {
+    padding-bottom: 60px; /*distancia do item para a caixa*/
+  }
+  .bicicletas-lista ul {
+    gap: 20px; /*distancia entre os itens*/
+  }
+}

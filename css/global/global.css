@@ -5,6 +5,9 @@ body {
   color: #111111;
 }
 h1,
+h2,
+h3,
+h4,
 ul,
 p {
   margin: 0px; /*tirar margem padrão*/
@@ -20,4 +23,8 @@ a {
 img {
   max-width: 100%; /*tamanho maximo da pagina*/
   display: block; /*display em bloco*/
+}
+img[src$=".jpg"] {
+  /*todo item terminado em .jpg terá o estilo definido abaixo*/
+  border-radius: 4px;
 }
