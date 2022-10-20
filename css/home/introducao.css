@@ -30,15 +30,6 @@
 .introducao p {
   margin-bottom: 20px; /*margem do item para o bottom*/
 }
-
-@media (max-width: 1200px) {
-  .introducao h1 {
-    font-size: 48px; /*abaixo de 1200 a fonte será menor*/
-  }
-  .introducao p {
-    font-size: 18px; /*abaixo de 1200 a fonte será menor*/
-  }
-}
 @media (max-width: 800px) {
   .introducao-bg {
     background: var(
@@ -55,7 +46,6 @@
     padding-bottom: 0px; /*abaixo de 800 não terá distancia entre o botão e a imagem*/
   }
   .introducao h1 {
-    font-size: 32px; /*abaixo de 800 a fonte será menor*/
     margin-bottom: 16px; /*abaixo de 800 a margim bottom será menor*/
   }
   .introducao img {

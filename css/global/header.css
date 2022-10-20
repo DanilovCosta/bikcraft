@@ -19,11 +19,8 @@
   gap: 40px; /*distandia entre os links do menu*/
 }
 .header-menu a {
-  font-family: "Poppins"; /*fonte do menu baixada do google fonts*/
-  font-weight: 400; /*tipografia da fonte baixada do google*/
   display: inline-block; /*quando o menu ficar abaixo do outro manter o tamanho padrão*/
   padding: 16px 0px; /*distancia de top e bot sobre o item*/
-  font-size: 18px; /*tamanho da font do menu*/
   position: relative; /*posição relativa para o item abaixo ser absoluto*/
 }
 .header-menu a::after {
