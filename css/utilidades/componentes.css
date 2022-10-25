@@ -16,9 +16,17 @@
   text-transform: uppercase; /*letras maiusculas*/
   color: var(--cor-p5); /*cor do botão*/
   font: 600 1.125rem/1.35 "popins", sans-serif;
+  max-width: max-content; /*tamanho maximo do conteudo dele*/
 }
 .botao:hover {
   background: linear-gradient(#ffb60d, #e59317); /*cor do botão*/
+}
+.botao.secundario {
+  background: var(--cor-10);
+  color: var(--cor-2);
+}
+.botao.secundario:hover {
+  background: var(--cor-9);
 }
 .link {
   display: inline-block; /*para pegar todos os paddings definidos*/

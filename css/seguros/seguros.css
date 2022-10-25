@@ -1,0 +1,59 @@
+.seguros-bg {
+  background: var(--cor-11); /*cor do fundo*/
+}
+.seguros {
+  display: grid; /*grid para criar colunas*/
+  grid-template-columns: 1fr 1fr; /*quantidade de 2 colunas iguais*/
+  padding-top: 60px; /*distancia do top*/
+  padding-bottom: 60px; /*distancia do bottom*/
+  gap: 40px; /*distancia entre os itens*/
+  align-items: center; /*alinhas os itens ao centro*/
+}
+.seguros h2 {
+  grid-column: 1/-1; /*h2 pegara todas as colunas*/
+}
+.seguros-item {
+  background-color: var(--cor-12); /*cor do container*/
+  padding: 32px 32px 32px 60px; /*distancia dos itens para o container*/
+  display: grid; /*grid para fividir em 2 colunas*/
+  grid-template-columns: 1fr auto;
+}
+.seguros-item h3 {
+  margin-bottom: 40px; /*distancia ddo bottom*/
+}
+.seguros-item span {
+  grid-column: 2; /*span mantido na segunda coluna*/
+  display: block; /*display block para manter um abaixo do outro*/
+  text-align: right; /*textos do span alinhado a direita*/
+}
+.seguros-item ul {
+  grid-column: 1/-1; /*lista pegando as duas colunas*/
+  margin-bottom: 32px; /*distancia entre o bottom*/
+}
+.seguros-item li {
+  display: flex; /*para alinhar lado a lado*/
+  align-items: center; /*alinhar ao centro do objeto*/
+  position: relative; /*para colocar o befone como absolute*/
+}
+.seguros-item li + li {
+  /*adicionará margem top a partir do segundo LI*/
+  margin-top: 20px; /*adicionará margem top a partir do segundo LI*/
+}
+.seguros-item li::before {
+  /*criar enfeite na lista*/
+  content: ""; /*em branco*/
+  display: inline-block; /*para colocar a frente da lista*/
+  width: 13px; /*comprimento*/
+  height: 9px; /*altura*/
+  background-image: url(../../img/icones/lista.svg); /*link da imagem*/
+  position: absolute; /*para ficar fora da caixa*/
+  left: -21px; /*a esquerda*/
+}
+.seguros-item a {
+  grid-column: 1/-1; /*botão pegando as duas colunas*/
+}
+@media (max-width: 800px) {
+  .seguros {
+    grid-template-columns: 1fr;
+  }
+}
