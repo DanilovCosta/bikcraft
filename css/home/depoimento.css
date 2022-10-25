@@ -1,0 +1,52 @@
+.depoimento {
+  display: grid; /* display grid para dividir em colunas*/
+  grid-template-columns: 1fr 1fr; /*definir 2 colunas iguais*/
+  background-color: var(--cor-p1); /*cor do funto*/
+  overflow: hidden; /*sepre que o teto for estourar o container, esconder a barra*/
+}
+.depoimento img {
+  width: 100%; /*largura de 100% do container*/
+  height: 100%; /*Altura de 100% do container*/
+  border-radius: 0px; /*Sem bordas arredondadas*/
+  object-fit: cover; /*para que a imagem seja cortada*/
+}
+.depoimento-conteudo {
+  padding: 40px 40px 80px 80px; /*distancia dos lados, top e direita 40px baixo e esquerda 80px*/
+  align-self: end; /*alinhar o texto ao final do container*/
+}
+.depoimento-conteudo p {
+  max-width: 32ch; /*tamanho maximo de expansão de 32 carateres*/
+  font-family: "Merriweather", serif; /*fonte baixada do google fonts*/
+  font-style: italic; /*fonte italica*/
+  font-weight: 900; /*peso da fonte*/
+  margin-bottom: 32px; /*margem para o bottom*/
+  position: relative; /*para o before ser absoluto*/
+}
+.depoimento p::before,
+.depoimento p::after {
+  font-size: 5rem; /*taanho das aspas*/
+  color: var(--cor-p2); /*cor das aspas*/
+  position: absolute; /*posição absoluta */
+}
+.depoimento p::before {
+  content: "“"; /*ccriar aspas diferente do conteudo*/
+  left: -50px; /*distancia sobre o texto do paragrafo*/
+  top: -20px; /*distancia sobre o texto do paragrafo*/
+}
+.depoimento p::after {
+  content: "”"; /*criar aspas diferente do conteudo*/
+}
+
+@media (max-width: 800px) {
+  .depoimento {
+    grid-template-columns: 1fr; /*abaixo de 800 px fica somente 1 coluna*/
+    text-align: center; /*Texto alinhado ao centro*/
+  }
+  .depoimento img {
+    max-height: 200px;
+  }
+  .depoimento-conteudo {
+    padding: 40px 20px; /*distancia de 40px para cima e baixo e 20 para os lados*/
+    justify-self: center; /*alinhar o conteudo ao centro*/
+  }
+}

@@ -31,6 +31,9 @@
   .parceiros {
     padding-bottom: 60px; /*distancia para o bottom*/
   }
+  .parceiros li {
+    padding: 20px; /*diminuir o paddin*/
+  }
   .parceiros h2 {
     margin-bottom: 20px; /*distancia para o bottom*/
   }
