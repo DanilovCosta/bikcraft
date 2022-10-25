@@ -4,12 +4,6 @@
 }
 .bicicletas-lista h2 {
   margin-bottom: 40px; /*margem do container para o bottom*/
-  max-width: 1200px; /*tamanho maximo do containes*/
-  box-sizing: border-box; /*tamanho não ultrapassa o max-width somando margens*/
-  padding-left: 20px; /*distancia dos itens dentro do container lado esquerdo*/
-  padding-right: 20px; /*distancia dos itens dentro do container lado direito*/
-  margin-left: auto; /*quando for maior que 1400px centralixar*/
-  margin-right: auto; /*quando for maior que 1400px centralizar*/
 }
 .bicicletas-lista ul {
   display: flex; /*colocar itens lado a lado*/

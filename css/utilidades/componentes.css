@@ -1,3 +1,12 @@
+.container {
+  max-width: 1200px; /*tamanho maximo do containes*/
+  box-sizing: border-box; /*tamanho não ultrapassa o max-width somando margens*/
+  padding-left: 20px; /*distancia dos itens dentro do container lado esquerdo*/
+  padding-right: 20px; /*distancia dos itens dentro do container lado direito*/
+  margin-left: auto; /*quando for maior que 1400px centralixar*/
+  margin-right: auto; /*quando for maior que 1400px centralizar*/
+}
+
 .botao {
   display: inline-block; /*quando o menu ficar abaixo do outro manter o tamanho padrão*/
   padding: 16px 32px; /*distancia da caixa do botão*/
@@ -10,6 +19,23 @@
 }
 .botao:hover {
   background: linear-gradient(#ffb60d, #e59317); /*cor do botão*/
+}
+.link {
+  display: inline-block; /*para pegar todos os paddings definidos*/
+  color: var(--cor-p1); /*cor do link*/
+  font: 500 1.5rem/1.5 "popins", sans-serif; /*peso da fonte, tamanho, altura da linha, tipo de fonte*/
+  text-transform: uppercase; /*aumenta para capslock*/
+}
+.link::after {
+  /*definindo o sublinhado*/
+  content: ""; /*sempre em branco*/
+  display: block; /*transforma em um bloco*/
+  width: 100%; /*o tamanho do Pai que seria o nome escrito no link*/
+  height: 4px; /*altura do sublinhado*/
+  background-color: currentColor; /*vai definir a mesma cor que foi definido no PAI que seria o .link*/
+}
+.link:hover {
+  color: var(--cor-0);
 }
 @media (max-width: 600px) {
   .botao {

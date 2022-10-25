@@ -7,11 +7,8 @@
   gap: 20px; /*distancia entre os itens*/
   justify-content: space-between; /*jogar logo para a esquerda e menu para a direita*/
   align-items: center; /*Alinhas itens ao centro da caixa*/
-  box-sizing: border-box;
-  padding: 20px; /* distandia dos itens dentro da caixa 20px para cada lado e cima e baixo*/
-  max-width: 1200px; /*tamanho da caixa entre logo e menu*/
-  margin-left: auto; /*quando aumentar o site sempre alinhar o menu ao centro*/
-  margin-right: auto; /*quando aumentar o site sempre alinhar o menu ao centro*/
+  padding-top: 20px; /* distandia dos itens dentro da caixa 20px para cima */
+  padding-bottom: 20px; /* distandia dos itens dentro da caixa 20px para baixo*/
 }
 .header-menu {
   display: flex; /*display flex para colocar os itens um ao lado do outro*/

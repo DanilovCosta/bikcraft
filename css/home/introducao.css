@@ -6,12 +6,6 @@
   display: grid; /*display grid para dividir as colunas*/
   grid-template-columns: 1fr 1fr; /*2 colunas divididas igualmente*/
   gap: 0px 40px; /*distancia entre os itens cima/baixo e esquerda/direita*/
-  box-sizing: border-box; /*soma as margins e paddins junto ao max-width*/
-  max-width: 1200px; /*tamanho da caixa entre logo e menu*/
-  padding-left: 20px; /*distancia da caixa para a margim esquerda*/
-  padding-right: 20px; /*distancia da caixa para a margim direita*/
-  margin-left: auto; /*quando aumentar o site sempre alinhar o menu ao centro*/
-  margin-right: auto; /*quando aumentar o site sempre alinhar o menu ao centro*/
 }
 .introducao-conteudo {
   align-self: end; /*alinhar os itens ao final do container*/
@@ -19,6 +13,7 @@
 }
 
 .introducao img {
+  width: 100%; /*imagem maximo do tamanho do container*/
   height: 100%; /*imagem 100% do container*/
   object-fit: cover; /*fara com que a imagem redimensione dentro do campo estipulado*/
   border-radius: 4px; /*imagem com cantos arredondados*/
