@@ -1,0 +1,46 @@
+.parceiros {
+  padding-top: 60px; /*distancia do topo*/
+  padding-bottom: 120px; /*distancia do bottom*/
+}
+.parceiros h2 {
+  margin-bottom: 60px; /*distancia para o bottom*/
+}
+.parceiros ul {
+  padding: 0 20px; /*distancia dos itens para cima e baixo 0 e para os lados de 20px*/
+  max-width: 1400px; /*tamanho maximo da largura*/
+  display: grid; /*usa-se o grid para alinhar todos os itens*/
+  grid-template-columns: repeat(4, 1fr); /*numero de 4 colunas de 1fr cada*/
+  margin: 0 auto; /*quando a pagina tiver maior que 1400 centralizar o container dos lados com auto*/
+}
+.parceiros li {
+  display: flex; /*display flex para alinhar os itens ao centro da caixa*/
+  padding: 32px; /*tamanho da caixa*/
+  border-left: 2px solid var(--cor-2); /*borda a esquerda com 2px de tamanho e cor cinza*/
+}
+.parceiros img {
+  margin: auto; /*alinhar as imagens ao centro da caixa*/
+}
+.parceiros li:first-child,/*falar com o primeiro item*/
+.parceiros li:nth-child(5) /*falar com o 5 item*/ {
+  border-left: none;
+}
+.parceiros li:nth-child(n + 5) {
+  border-top: 2px solid var(--cor-2);
+}
+@media (max-width: 800px) {
+  .parceiros {
+    padding-bottom: 60px; /*distancia para o bottom*/
+  }
+  .parceiros h2 {
+    margin-bottom: 20px; /*distancia para o bottom*/
+  }
+  .parceiros ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .parceiros li:nth-child(n + 3) {
+    border-top: 2px solid var(--cor-2);
+  }
+  .parceiros li:nth-child(odd) {
+    border-left: none;
+  }
+}
