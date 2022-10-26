@@ -1,0 +1,91 @@
+.bicicletas-bg {
+  background: linear-gradient(
+    to right,
+    var(--cor-0) 30%,
+    var(--cor-11) 0%
+  ); /*para criar um campo com 2 cores usa-se linear gradiente (to right = para a direita) usa-se a cor desejada e a porcentagem*/
+}
+.bicicletas {
+  display: grid; /*display grid para separar em colunas*/
+  grid-template-columns: 1fr 1fr; /*quantidade de 2 colunas*/
+  gap: 40px; /*distancia entre os itens do container*/
+  padding-top: 60px; /*distancia do top*/
+  padding-bottom: 60px; /*distancia do bottom*/
+}
+.bicicletas-imagem {
+  display: grid; /*para ajustar o valor sobre a imagem também podem fazer com position*/
+}
+.bicicletas-imagem img {
+  grid-area: 1/1; /*ocupar a mesma area que o valor*/
+}
+.bicicletas-imagem span {
+  grid-area: 1/1; /*ocupar a mesma area que a imagem*/
+  place-self: start end; /*posicionar ao inicio e ao lado esquerdo*/
+  margin-top: 20px; /*distancia do container para o top*/
+  background: var(--cor-12); /*cor do span preço*/
+  display: inline-block; /*display inline block para posicionar sobre a imagem*/
+  padding: 8px 16px 8px 8px; /*distancia entre a imagem e o container*/
+  border-radius: 4px 0 0 4px; /*borda 4px esquerdo superior, 0 para direito superior, 0 para direito inferior e 4px para esquerdo inferior*/
+}
+.bicicletas-conteudo {
+  display: grid; /*para criar colunas */
+  grid-template-columns: 1fr auto; /*1 coluna e 1 automatica para ajustar o tamanho do botão*/
+  align-content: start; /*quando aumentar muito a pagina alinhar o texto ao inicio da imagem*/
+}
+.bicicletas h2,
+.bicicletas p {
+  grid-column: 1/-1; /*para que o h2 e o p pegue a coluna de ponta a ponta*/
+}
+.bicicletas h2 {
+  margin-bottom: 20px;
+}
+.bicicletas-conteudo h2::before {
+  content: "";
+  display: block; /*block para criar uma caixa */
+  width: 12px; /*largura do icone*/
+  height: 8px; /*altura do icone*/
+  background-color: var(--cor-p1);
+  margin-bottom: 8px; /*margim do item para o bottom*/
+}
+.bicicletas p {
+  margin-bottom: 32px; /*distancia entre o texto para o bottom*/
+}
+.bicicletas a {
+  place-self: end; /*alinhar o botão ao final do container*/
+}
+.bicicletas li {
+  display: flex; /*Display flex para colocar a imagem e o texto ladoa  lado*/
+  align-items: center; /*alinhar ao centro*/
+}
+.bicicletas ul {
+  display: grid; /*display grid para ajustar a distancia entre o icone e o texto*/
+  gap: 16px; /*Distancia entre o icone e o texto*/
+}
+.bicicletas-conteudo img {
+  width: 24px; /*altura do icone*/
+  margin-right: 8px; /*margem para a direita do item para o texto*/
+}
+@media (max-width: 800px) {
+  .bicicletas-bg {
+    background: var(--cor-11);
+  }
+  .bicicletas {
+    grid-template-columns: 1fr; /*abaio de 800 px apenas 1 coluna */
+    gap: 20px; /*distancia entre os itens*/
+    padding-top: 40px; /*distancia entre o top*/
+    padding-bottom: 40px; /*distancia entre o bottom*/
+  }
+}
+@media (max-width: 600px) {
+  .bicicletas-conteudo {
+    grid-template-columns: 1fr; /*abaixo de 600px passar a ter apenas 1 coluna*/
+  }
+  .bicicletas-conteudo ul {
+    font-size: 1rem; /* diminuir font*/
+    grid-template-columns: 1fr 1fr; /*2 colunas da descrição do conteudo*/
+    margin-bottom: 32px; /*distancia do bottom*/
+  }
+  .bicicletas-conteudo a {
+    place-self: start; /*alinhar o botão ao inicio*/
+  }
+}

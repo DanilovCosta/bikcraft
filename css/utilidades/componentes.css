@@ -28,6 +28,25 @@
 .botao.secundario:hover {
   background: var(--cor-9);
 }
+.botao.seta {
+  display: flex; /*dis play flex para alinhar a seta*/
+  align-items: center; /*alinhas a seta ao centro*/
+}
+.botao.seta::after {
+  /*para criar a seta no botão*/
+  content: ""; /*nao escrever nada*/
+  display: inline-block; /*display inline para ficar somente o taanho da imagem*/
+  width: 18px; /*largura da iage*/
+  height: 10px; /*altura da imagem*/
+  margin-left: 12px; /*distancia do texto para a imagem*/
+  background: url(../../img/icones/seta.svg); /*caminho da imagem*/
+  transition: transform 0.2s; /*tempo que demora para mover a seta*/
+}
+.botao.seta:hover::after {
+  transform: translateX(
+    4px
+  ); /*quando apssar o mouse sobre o botão a seta anda 4px*/
+}
 .link {
   display: inline-block; /*para pegar todos os paddings definidos*/
   color: var(--cor-p1); /*cor do link*/
