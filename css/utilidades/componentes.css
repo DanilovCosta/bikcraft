@@ -51,3 +51,24 @@
     font-size: 1rem; /*tamanho da fonte do botão*/
   }
 }
+
+/*Titulos Interno*/
+.titulo-bg {
+  background-color: var(--cor-11); /*cor do funto*/
+  padding-top: 60px; /*distancia do texto para o top*/
+  padding-bottom: 60px; /*distancia do texto para o bottom*/
+}
+.titulo p {
+  margin-bottom: 4px; /*distancia da caixa para o bottom*/
+}
+@media (max-width: 800px) {
+  .titulo-bg {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .titulo p {
+    font-size: 1rem; /*tamanho da fonte*/
+    text-transform: lowercase; /*fonte pequena*/
+    font-weight: 400; /*peso da fonte*/
+  }
+}

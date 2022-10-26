@@ -1,0 +1,15 @@
+.termos {
+  padding-top: 80px; /*distancia entre o texto do top*/
+  padding-bottom: 80px; /*distancia entre o texto do bottom*/
+}
+.termos h2 {
+  margin-bottom: 20px; /*distancia entre o texto do bottom*/
+}
+.termos p + h2 {
+  /*para adcionar a margim a partir do segundo h2*/
+  margin-top: 40px;
+}
+.termos p {
+  max-width: 75ch; /*maximo de caracteres de 75*/
+  margin-bottom: 24px; /*distancia entre o texto do bottom*/
+}
