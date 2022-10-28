@@ -1,0 +1,56 @@
+.perguntas {
+  padding-top: 120px; /*distancia do top*/
+  padding-bottom: 120px; /*distancia do bottom*/
+}
+.perguntas h2 {
+  margin-bottom: 60px; /*distancia do bottom*/
+}
+.perguntas dl > div {
+  padding: 20px; /*distancia entre o item e a caixa*/
+  border-radius: 4px; /*borda arredondada*/
+}
+.perguntas dl > div:nth-child(odd) {
+  /*para pintar perguntas impares de cinza*/
+  background-color: var(--cor-1);
+}
+.perguntas dt {
+  display: grid; /*para separar em colunas*/
+  grid-template-columns: auto 1fr auto; /*primeira coluna auto, segunda cresça o quanto der e terceira coluna auto*/
+  align-items: center; /*alinhas os icones ao centro*/
+  gap: 8px; /*distancia entre os itens*/
+  cursor: pointer; /*maozinha quando a pessoa saber que da pra clicar e abrir um campo*/
+}
+.perguntas dt::before {
+  /*para criar a caixinha amarela a frente da pergunta*/
+  content: ""; /*nao escreve nada*/
+  display: inline-block; /* para posicionar */
+  width: 12px; /*largura da caixinha amarela*/
+  height: 8px; /*altura da caixinha amarela*/
+  background-color: var(--cor-p1);
+}
+.perguntas dt::after {
+  /*para criar a caixinha amarela a frente da pergunta*/
+  content: ""; /*nao escreve nada*/
+  display: inline-block; /* para posicionar */
+  width: 14px; /*largura da caixinha amarela*/
+  height: 6px; /*altura da caixinha amarela*/
+  background: url(../../img/icones/seta-abrir.svg); /*url da imagem seta*/
+  transition: 0.3s; /*tempo para rotacionar a seta*/
+}
+.perguntas dt:hover::after {
+  transform: rotate(180deg); /*quando passar o mouse girar o icone after*/
+}
+.perguntas dd {
+  padding-left: 20px; /*alinhas a resposta com a pergunta 12px do icone + 8 do paddin*/
+  padding-top: 16px; /*distancia entre a pergunta e a resposta*/
+  max-width: 80ch; /*tamanho maximo da resposta de 80 caracteres*/
+}
+@media (max-widht: 800px) {
+  .perguntas {
+    padding-top: 60px; /*distancia do top*/
+    padding-bottom: 60px; /*distancia do bottom*/
+  }
+  .perguntas h2 {
+    margin-bottom: 40px; /*distancia do bottom*/
+  }
+}
