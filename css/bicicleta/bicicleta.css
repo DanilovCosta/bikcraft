@@ -1,0 +1,99 @@
+.bicicleta {
+  display: grid; /*display grid para dividir em colunas*/
+  grid-template-columns: 1fr 1fr; /*quantidade de colunas*/
+  align-items: start; /*alinhas os itens sempre ao inicio*/
+  gap: 40px; /*distancia entre os itens*/
+  padding-top: 60px; /*distancia entre o item acima*/
+  padding-bottom: 60px; /*distancia entre o item abaixo*/
+}
+#bicicleta .titulo p {
+  text-transform: uppercase; /*sempre o titulo p será capslock*/
+}
+.bicicleta-imagens {
+  display: flex; /*display flex para colocar lado a lado as imagens*/
+  flex-wrap: wrap; /*quando for estourar o container ir para  alinha abaixo*/
+  gap: 20px; /*distancia entre os itens*/
+}
+.bicicleta-imagens img {
+  flex: 1; /**/
+  min-width: 200px; /*imagens com minimo de 200px*/
+}
+.bicicleta-imagens img:first-child {
+  min-width: 100%; /* primeira imagem terá sempre 100%*/
+}
+.bicicleta-conteudo > p {
+  margin-bottom: 32px; /*margem para o item abaixo*/
+}
+.bicicleta-comprar {
+  display: grid; /*display grid para criar colunas*/
+  grid-template-columns: max-content auto; /*maximo do conteudo do botão segunda coluna automatica*/
+  align-items: center; /*alinhar ao centro*/
+  justify-items: start;
+  gap: 8px 12px; /*8 px para linha e 12 px para a coluna*/
+  margin-bottom: 40px; /*distancia para o bottom*/
+}
+.bicicleta-comprar a {
+  grid-row: span 2; /*ocupar 2 linhas*/
+}
+.bicicleta-comprar span {
+  display: flex; /*display flex */
+  align-items: center; /*alinhas ao centro*/
+  background-color: var(--cor-12); /*cor de fundo */
+  gap: 8px; /*gap para distancias a imagem do texto*/
+  padding: 4px 8px; /*distancia o texto par a caixa 4 para cima e baixo e 8 para os lados*/
+  border-radius: 4px; /*arredondar as bordas da caixa*/
+}
+.bicicleta-conteudo h2 {
+  text-transform: uppercase; /*letras em capslock*/
+  letter-spacing: 0.015em; /*distancia entre as letras da palavra informação*/
+  margin-bottom: 12px; /*margem para o bottom*/
+}
+.bicicleta-informacoes,
+.bicicleta-ficha {
+  padding: 32px; /*distancia dos itens para a caixa*/
+  background-color: var(--cor-12); /*cor de*/
+  border-radius: 4px; /*borda arredondada*/
+}
+.bicicleta-informacoes {
+  margin-bottom: 40px; /*distancia para o bottom*/
+  display: grid; /*grid para criar colunas*/
+  grid-template-columns: 1fr 1fr; /*quantidade de colunas 2 iguais*/
+  gap: 32px; /*distancia entre os itens*/
+}
+.bicicleta-informacoes img {
+  width: 24px; /*tamanho maximo da imagem*/
+  margin-bottom: 8px; /*distancia para o bottom*/
+}
+.bicicleta-informacoes h3 {
+  margin-bottom: 8px; /*distancia para o bottom*/
+}
+.bicicleta-ficha li {
+  padding: 4px 0; /*padim para cima e para baixo*/
+  display: flex; /*display flex para alinhar os itens*/
+  justify-content: space-between; /*colocar 1 item a esquerda e outro a direita*/
+  border-bottom: 1px solid var(--cor-11);
+}
+.bicicleta-ficha li:last-child {
+  border-bottom: none; /*tirar borda da ultima linha*/
+}
+.bicicleta-ficha span {
+  color: var(--cor-6); /*cor da letra */
+}
+@media (max-width: 800px) {
+  .bicicleta {
+    grid-template-columns: 1fr; /*passar a ter apenas 1 coluna*/
+    padding-top: 40px; /*margem para o top*/
+    padding-bottom: 40px; /*margem para o bottom*/
+  }
+  .bicicleta-imagens {
+    grid-row: 2; /*colocar a exibição da imagem apra a linha 2*/
+  }
+}
+@media (max-width: 400px) {
+  .bicicleta-informacoes {
+    grid-template-columns: 1fr;
+  }
+  .bicicleta-comprar {
+    grid-template-columns: 1fr;
+  }
+}
