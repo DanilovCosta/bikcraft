@@ -15,6 +15,9 @@
   overflow-x: auto; /*cria uma barra de rolagem para o lado quando diminuir muito a pagina somente no eixo x
 */
 }
+#bicicleta .bicicletas-lista ul {
+  padding: 0px 0px 20px 0px; /*tirar o paddim para os lados na pagina de bibicleta*/
+}
 .bicicletas-lista li {
   min-width: 280px; /*tamanho minimo para a imagem*/
 }
