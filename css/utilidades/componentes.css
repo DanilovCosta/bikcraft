@@ -17,6 +17,8 @@
   color: var(--cor-p5); /*cor do botão*/
   font: 600 1.125rem/1.35 "popins", sans-serif;
   max-width: max-content; /*tamanho maximo do conteudo dele*/
+  border: none; /*tirar a borda do botão*/
+  cursor: pointer; /*criar a mão no botão*/
 }
 .botao:hover {
   background: linear-gradient(#ffb60d, #e59317); /*cor do botão*/
