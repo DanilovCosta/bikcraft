@@ -79,6 +79,9 @@
   padding-top: 60px; /*distancia do texto para o top*/
   padding-bottom: 60px; /*distancia do texto para o bottom*/
 }
+.titulo {
+  background: url(../../img/dec/top-right.svg) no-repeat top right 20px;
+}
 .titulo p {
   margin-bottom: 4px; /*distancia da caixa para o bottom*/
 }

@@ -11,6 +11,7 @@
   gap: 40px; /*distancia entre os itens do container*/
   padding-top: 60px; /*distancia do top*/
   padding-bottom: 60px; /*distancia do bottom*/
+  background: url(../../img/dec/top-right.svg) no-repeat top 40px right 20px;
 }
 .bicicletas-imagem {
   display: grid; /*para ajustar o valor sobre a imagem também podem fazer com position*/

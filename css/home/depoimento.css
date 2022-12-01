@@ -13,6 +13,8 @@
 .depoimento-conteudo {
   padding: 40px 40px 80px 80px; /*distancia dos lados, top e direita 40px baixo e esquerda 80px*/
   align-self: end; /*alinhar o texto ao final do container*/
+  background: url(../../img/dec/bottom-right-p.svg) no-repeat bottom 40px right
+    40px;
 }
 .depoimento-conteudo p {
   max-width: 32ch; /*tamanho maximo de expansão de 32 carateres*/
@@ -36,7 +38,11 @@
 .depoimento p::after {
   content: "”"; /*criar aspas diferente do conteudo*/
 }
-
+@media (max-width: 1200px) {
+  .depoimento img {
+    max-height: 520px;
+  }
+}
 @media (max-width: 800px) {
   .depoimento {
     grid-template-columns: 1fr; /*abaixo de 800 px fica somente 1 coluna*/
