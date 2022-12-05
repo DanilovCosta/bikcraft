@@ -23,6 +23,7 @@ a {
 }
 img {
   max-width: 100%; /*tamanho maximo da pagina*/
+  height: auto;
   display: block; /*display em bloco*/
 }
 img[src$=".jpg"] {
