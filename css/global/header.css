@@ -31,7 +31,9 @@
   transition: 0.3s; /*tempo que demorará para o sublinhado carregar os 100%*/
   position: absolute; /*posição absolute sobre o item acima*/
 }
-.header-menu a:hover:after {
+.header-menu a:hover::after,
+.header-menu a.ativo::after {
+  /*quando o link do menu estiver ativo manter o sublinhado ativado*/
   width: 100%; /*quando passar o mouse o sublinhado aparecerá*/
 }
 @media (max-width: 800px) {

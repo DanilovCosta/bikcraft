@@ -13,14 +13,18 @@
   /*para pintar perguntas impares de cinza*/
   background-color: var(--cor-1);
 }
-.perguntas dt {
+.perguntas button {
   display: grid; /*para separar em colunas*/
   grid-template-columns: auto 1fr auto; /*primeira coluna auto, segunda cresça o quanto der e terceira coluna auto*/
   align-items: center; /*alinhas os icones ao centro*/
   gap: 8px; /*distancia entre os itens*/
   cursor: pointer; /*maozinha quando a pessoa saber que da pra clicar e abrir um campo*/
+  border: none; /*tirar borda do botão*/
+  background: none; /*tirar cor de fundo do botão*/
+  width: 100%; /*colocar a setinha para o lado direito*/
+  text-align: left; /*alinhar texto a esquerda*/
 }
-.perguntas dt::before {
+.perguntas button::before {
   /*para criar a caixinha amarela a frente da pergunta*/
   content: ""; /*nao escreve nada*/
   display: inline-block; /* para posicionar */
@@ -28,7 +32,7 @@
   height: 8px; /*altura da caixinha amarela*/
   background-color: var(--cor-p1);
 }
-.perguntas dt::after {
+.perguntas button::after {
   /*para criar a caixinha amarela a frente da pergunta*/
   content: ""; /*nao escreve nada*/
   display: inline-block; /* para posicionar */
@@ -37,8 +41,15 @@
   background: url(../../img/icones/seta-abrir.svg); /*url da imagem seta*/
   transition: 0.3s; /*tempo para rotacionar a seta*/
 }
-.perguntas dt:hover::after {
+.perguntas button:hover::after,
+.perguntas button[aria-expanded="true"]::after {
   transform: rotate(180deg); /*quando passar o mouse girar o icone after*/
+}
+.js .perguntas dd {
+  display: none; /*faz sumir as respostas das perguntas*/
+}
+.js .perguntas dd.ativa {
+  display: block; /*quando ativa aparece as respostas das perguntas*/
 }
 .perguntas dd {
   padding-left: 20px; /*alinhas a resposta com a pergunta 12px do icone + 8 do paddin*/
